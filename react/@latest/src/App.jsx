@@ -4,18 +4,18 @@ import { createContext } from "react";
 import { useContext } from "react";
 
 const app = () => {
-  const [users,setUsers]=useState([])
+  // const [users,setUsers]=useState([])
 
-  useEffect(()=>{
-    axios.get("http://localhost:4000/users")
-    .then((res)=>{
-      setUsers(res.data)
-    })
-    .catch((err)=>{
-      console.log(err); 
-    })
-  },[])
-  console.log(users);
+  // useEffect(()=>{
+  //   axios.get("http://localhost:4000/users")
+  //   .then((res)=>{
+  //     setUsers(res.data)
+  //   })
+  //   .catch((err)=>{
+  //     console.log(err); 
+  //   })
+  // },[])
+  // console.log(users);
   
   
 //   return (
@@ -48,8 +48,25 @@ const app = () => {
 //       </button>
 //   )
 
+return <>
+  <Con.Provider value="shanu"><Child /></Con.Provider>
+  <Con.Provider value="sha"><Child2 /></Con.Provider>
+</>
+
 }
 
 
 export default app;
+
+const Con = createContext()
+
+const Child = ()=>{
+  const name = useContext(Con)
+  return <h1>helllo : {name}</h1>
+}
+
+const Child2 = ()=>{
+  const name = useContext(Con);
+  return <h1>hello : {name}</h1>
+}
 
