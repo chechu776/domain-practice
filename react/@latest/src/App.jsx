@@ -3,6 +3,7 @@ import axios from "axios"
 import { createContext } from "react";
 import { useContext } from "react";
 import { useReducer } from "react";
+import useCounter from "./Custom";
 
 const app = () => {
   // const [users,setUsers]=useState([])
@@ -54,26 +55,36 @@ const app = () => {
 //   <Con.Provider value="sha"><Child2 /></Con.Provider>
 // </>
 
-const reducer =(state,action)=>{
-  if(action == "inc")
-  {
-    return state+1
-  }
-  else
-  {
-    return state-1
-  }
-}
+// const reducer =(state,action)=>{
+//   if(action == "inc")
+//   {
+//     return state+1
+//   }
+//   else
+//   {
+//     return state-1
+//   }
+// }
 
-const [state,dispatch] = useReducer(reducer,0)
+// const [state,dispatch] = useReducer(reducer,0)
 
-return(
-  <>
-    <h1> count :{state}</h1>
-    <button onClick={()=>dispatch("inc")}> increment</button>
-    <button onClick={()=>dispatch("dec")}> decrement</button>
-  </>
-)
+// return(
+//   <>
+//     <h1> count :{state}</h1>
+//     <button onClick={()=>dispatch("inc")}> increment</button>
+//     <button onClick={()=>dispatch("dec")}> decrement</button>
+//   </>
+// )
+
+const { count , increment, decrement} = useCounter(0);
+
+  return (
+    <>
+      <h1>count:{count}</h1>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+    </>
+  )
 
 }
 
