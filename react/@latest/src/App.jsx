@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios"
+import { createContext } from "react";
+import { useContext } from "react";
 
 const app = () => {
-//   const [users,setUsers]=useState([])
+  const [users,setUsers]=useState([])
 
-//   useEffect(()=>{
-//     axios.get("http://localhost:4000/users")
-//     .then((res)=>{
-//       setUsers(res.data)
-//     })
-//     .catch((err)=>{
-//       console.log(err); 
-//     })
-//   },[])
-//   console.log(users);
+  useEffect(()=>{
+    axios.get("http://localhost:4000/users")
+    .then((res)=>{
+      setUsers(res.data)
+    })
+    .catch((err)=>{
+      console.log(err); 
+    })
+  },[])
+  console.log(users);
   
   
 //   return (
@@ -29,23 +31,25 @@ const app = () => {
 // };
 
 
-const [count,setCount]=useState(0);
+// const [count,setCount]=useState(0);
 
-  useEffect(() => {
-    console.log("Component mounted ✅");
+//   useEffect(() => {
+//     console.log("Component mounted ✅");
 
-    return () => {
-      console.log("Component unmounted 🗑️");
-    };
-  }, []);
+//     return () => {
+//       console.log("Component unmounted 🗑️");
+//     };
+//   }, []);
 
-  
-  return (
-      <button onClick={()=>setCount(count+1)}>
-        Count:{count}
-      </button>
-  )
+
+//   return (
+//       <button onClick={()=>setCount(count+1)}>
+//         Count:{count}
+//       </button>
+//   )
+
 }
 
 
 export default app;
+
