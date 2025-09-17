@@ -5,6 +5,9 @@ import { useContext } from "react";
 import { useReducer } from "react";
 import useCounter from "./Custom";
 
+import Input from "./Input";
+import Button from "./Button";
+
 const app = () => {
   // const [users,setUsers]=useState([])
 
@@ -76,17 +79,34 @@ const app = () => {
 //   </>
 // )
 
-const { count , increment, decrement} = useCounter(0);
+// const { count , increment, decrement} = useCounter(0);
 
-  return (
-    <>
-      <h1>count:{count}</h1>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-    </>
-  )
+//   return (
+//     <>
+//       <h1>count:{count}</h1>
+//       <button onClick={increment}>+</button>
+//       <button onClick={decrement}>-</button>
+//     </>
+//   )
+
+const [disp,setDisp]=useState("")
+const[inp,setInp]=useState("")
+
+const but = ()=>{
+  setDisp(inp)
+}
+
+return(
+  <>
+    <p>{disp}</p>
+    <Input inpu={setInp}></Input>
+    <Button on={but}></Button>
+  </>
+)
+
 
 }
+
 
 
 export default app;
