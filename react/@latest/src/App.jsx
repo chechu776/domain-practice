@@ -7,6 +7,8 @@ import useCounter from "./Custom";
 
 import Input from "./Input";
 import Button from "./Button";
+import { useCallback } from "react";
+import { useMemo } from "react";
 
 const app = () => {
   // const [users,setUsers]=useState([])
@@ -104,6 +106,19 @@ return(
   </>
 )
 
+
+// const[val,setVal] = useState(0)
+
+// const inc = useCallback(()=>{
+//   setVal((v)=>v+1)                                                                                                                                                
+// })
+
+// return(
+//   <>
+//     <h1>Value : {val}</h1>
+//     <button onClick={inc}> + </button>                                                                                                                              
+//   </>
+// )                                                       
 
 }
 
