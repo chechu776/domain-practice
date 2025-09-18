@@ -18,7 +18,6 @@ app.get("/users",async (req,res)=>{
     }
     catch(err){
         console.log(err);
-        
     }
 })
 
