@@ -1,7 +1,7 @@
 const arr = ["shanu","shamsudheen","nadhil","riyas"]
 
-const arr2 = arr.map((e)=>{
-    return e
+const arr2 = arr.filter((e)=>{
+    return e.startsWith("s")
 })
 
-console.log(""arr2);
+console.log("",arr2);
