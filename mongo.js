@@ -79,3 +79,6 @@ db.orders.aggregate([
   },
   { $sort: { "_id.year": 1, "_id.month": 1 } }
 ])
+
+
+db.users.find({ first_name: { $regex: "wen" } }); // matches only names starting with "abc"
