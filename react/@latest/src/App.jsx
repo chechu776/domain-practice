@@ -55,10 +55,6 @@ const app = () => {
 //       </button>
 //   )
 
-// return <>
-//   <Con.Provider value="shanu"><Child /></Con.Provider>
-//   <Con.Provider value="sha"><Child2 /></Con.Provider>
-// </>
 
 // const reducer =(state,action)=>{
 //   if(action == "inc")
@@ -118,13 +114,8 @@ return(
 //     <h1>Value : {val}</h1>
 //     <button onClick={inc}> + </button>                                                                                                                              
 //   </>
-// )                                                       
+// )                 
 
-}
-
-
-
-export default app;
 
 // const Con = createContext()
 
@@ -137,4 +128,18 @@ export default app;
 //   const name = useContext(Con);
 //   return <h1>hello : {name}</h1>
 // }
+
+// return <>
+//   <Con.Provider value="shanu"><Child /></Con.Provider>
+//   <Con.Provider value="sha"><Child2 /></Con.Provider>
+// </>
+
+
+}
+
+
+
+export default app;
+
+
 
