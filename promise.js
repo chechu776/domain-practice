@@ -44,18 +44,17 @@ const app = (a) => {
     })
 }
 
-const promisedisplay=async()=>{
+const promisedisplay = async () => {
     try {
         const result = await app(0);
         console.log(result);
     }
-    catch(err)
-    {
+    catch (err) {
         console.log(err);
     }
 }
 
-const newpro =(a)=>{
+const newpro = (a) => {
     return new Promise
 }
 
