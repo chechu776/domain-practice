@@ -32,7 +32,7 @@
 // Promise.all([p1, p2, p3]).then((res) => { console.log(res) })
 //     .catch((error) => {
 //         console.log("error", error);
-//     })
+//     }) zxz
 
 const app = (a) => {
     return new Promise((res, rej) => {
@@ -48,12 +48,10 @@ const promisedisplay=async()=>{
     try {
         const result = await app(0);
         console.log(result);
-        
     }
     catch(err)
     {
         console.log(err);
-        
     }
 }
 
